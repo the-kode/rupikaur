@@ -1,0 +1,603 @@
+/*
+
+SatireV
+MAIN STYLESHEET
+CSS (c) 2012 Preston So. with modifications by Joel Kwartler in 2015
+All rights reserved.
+
+*/
+
+/*
+Body and elements
+*/
+body {
+  margin: 0 60px;
+  padding: 0;
+  background: white url(images/body.jpg) no-repeat top center fixed;
+  color: black;
+  font: 1em/1.75em "Cardo", Georgia, serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #9c2d27;
+}
+a:hover, a:active {
+  text-decoration: underline;
+  color: #690a04;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/*
+Header
+*/
+header {
+  background: #FFFFFF; /*changed by JK from 75201c;*/
+  /** height: 500px; removed by JR**/
+}
+#header-inner {
+  width: 100%;
+    min-width: 960px;
+  margin: 0 auto;
+  /** added by JK  **/
+  background: #882c39 url(images/header.jpg) no-repeat;
+  display: block;
+  /**height: 110px; changed by JK **/
+  text-indent: -9999px;
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  background-size: auto 100%;
+    background-position: center;
+  /** height: 500px;  removed by JR **/
+}
+#header-inner h1 {
+  margin: 0;
+}
+#header-inner a {
+  /**background: transparent url(images/header.jpg) no-repeat;
+  display: block;
+  height: 110px; changed by JK **/
+  text-indent: -9999px;
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  /**added by JK**/
+  display:block;
+  padding-top: 200px; /** changed by JR **/
+}
+/** #header-inner a:hover, #header-inner a:active {
+  background-position: 0 -110px;
+} changed by JK **/
+
+/*
+Nav
+*/
+header nav {
+  background: #FFFFFF; /*changed by JK from a50000;*/
+  font: bold 0.85em 'Lato', Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+header nav h2 {
+  display: none;
+}
+header nav ul {
+  margin: 0 auto;
+  width: 100%;
+    min-width: 960px;
+  padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 6px;
+    align-items: center;
+    justify-content: stretch;
+}
+header nav ul li {
+  display: block;
+  margin: 5px 0 !important;
+  padding: 0 !important;
+  background: #a50000;
+}
+/**added by JK for individual menu colors*/
+header nav ul li.leaf:nth-child(1) {
+  background:#e1783d;
+}
+header nav ul li.leaf:nth-child(2) {
+  background:#79add0;
+}
+header nav ul li.leaf:nth-child(4) {
+  background:#3b6e36;
+}
+header nav ul li.leaf:nth-child(5) {
+  background:#e1bd3e;
+}
+header nav ul li.leaf:nth-child(6) {
+  background:#8087ae;
+}
+header nav ul li a {
+    display: block;
+  color: #fff;
+  text-align: center;
+  padding: 16px 12px;
+  font-size: 1.1em;
+    white-space: nowrap;
+    text-decoration: none;
+    font-weight: 300;
+}
+header nav ul li a:hover, nav ul li a:active, nav ul li a.active {
+  background-color: #820000;
+  text-decoration: none;
+  color: white;
+}
+
+/*
+Breaking
+*/
+#breaking {
+  background: none;
+  /* ^ changed by Joel from transparent url(images/breaking-container.png) repeat-x; */
+  clear: both;
+}
+#breaking-inner {
+  /* changed by Joel
+  background: transparent url(images/breaking.jpg) no-repeat top center;
+  height: 40px; */
+  background: none;
+    margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+
+#breaking-far-inner {
+  margin: 0 auto;
+  width: 100%;
+    min-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#breaking-left {
+  float: left;
+  font-family: 'Lato', Verdana, Arial, sans-serif;
+  /* added by Joel*/
+  color: gray;
+}
+#breaking-left h2 {
+  /* changed by Joel
+  color: #5396a0;
+  font-size: 1.1em;
+  margin: 0;
+  padding-top: 2px;
+  float: left;
+  width: 25%;
+  font-family: 'Cardo', Georgia, serif;
+  */
+  font-size: 1.1em;
+  margin: 0px;
+    display: inline-block;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  font-family: 'Lato', Verdana, Arial, sans-serif;
+  margin: 12px 1em 12px 0px;
+    padding-right: 1em;
+  color: black;
+    border-right: 1px solid gray;
+}
+#breaking-right {
+  float: right;
+}
+
+/*
+Search
+*/
+#block-search-form {
+  padding: 5px;
+}
+#block-search-form input {
+  /* added by Joel */
+  border: 1px solid lightgray;
+    border-style: solid;
+    width: 200px;
+  background-color: white;
+  padding: .7em;
+}
+#block-search-form input[type="submit"] {
+  background-color: #75201c;
+  border: 2px solid #75201c;
+    transition: all .2s;
+    padding: .4em;
+    width: 150px;
+  margin: 0;
+  color: white;
+  font: 0.85em 'Lato', Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#block-search-form input[type="submit"]:hover,  #block-search-form input[type="submit"]:active {
+    color: #75201c;
+    background-color: white;
+}
+
+#block-search-form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+/*
+Content and content layout
+*/
+#content {
+    width: 100%;
+  min-width: 960px;
+  margin: 0 auto;
+  clear: both;
+}
+#content-front-lower {
+  width:66%;
+}
+#block-views-sections-block-4 {
+   clear: none;
+}
+
+/*
+Main story
+*/
+#main-story {
+  float: left;
+  width: 66%;
+  padding-top: 10px;
+}
+#main-story .views-field-field-image {
+  margin-bottom: 15px;
+}
+#main-story .views-field-field-image img {
+  width: 100%;
+  height: 100%;
+}
+#main-story .views-field-title {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 1.8em;
+  line-height: 1.2em;
+  padding: 0 10px;
+}
+/*#main-story .story-byline {
+  text-transform: uppercase;
+  font-family: "NobileRegular", Verdana, Arial, sans-serif;
+}
+#main-story .story-byline a {
+  color: #999;
+}*/
+#main-story .views-field-field-teaser {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+/*
+Cover stories
+*/
+#cover-stories {
+  float: left;
+  width: 33%;
+  padding-top: 10px;
+}
+#cover-stories .views-field-title {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 0 15px;
+}
+#cover-stories .views-field-field-teaser {
+  padding: 10px 15px 20px;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+/*
+Top stories
+*/
+#top-stories {
+  background: rgb(160,216,239); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(160,216,239,1) 0%, rgba(221,241,249,1) 65%, rgba(254,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(160,216,239,1)), color-stop(65%,rgba(221,241,249,1)), color-stop(100%,rgba(254,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(160,216,239,1) 0%,rgba(221,241,249,1) 65%,rgba(254,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(160,216,239,1) 0%,rgba(221,241,249,1) 65%,rgba(254,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(160,216,239,1) 0%,rgba(221,241,249,1) 65%,rgba(254,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(160,216,239,1) 0%,rgba(221,241,249,1) 65%,rgba(254,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d8ef', endColorstr='#feffff',GradientType=0 ); /* IE6-9 */
+  background: #FFF; /* added by Joel */
+  float: right;
+  width: 30%;
+  padding: 0 15px 15px;
+  border-left: 1px dotted #ccc;
+}
+#top-stories h2 {
+  text-align: center;
+  font-family: 'Cardo', Georgia, serif;
+  color: #52100d;
+}
+#top-stories ul {
+  margin: 0;
+}
+#top-stories ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#top-stories .views-field-field-category a {
+  text-transform: uppercase;
+  font-family: 'Cardo', Georgia, serif;
+  margin-top: 15px;
+  display: block;
+  color: #666;
+}
+#top-stories .views-field-field-category a:hover, #top-stories .views-field-field-category a:active {
+  color: black;
+  text-decoration: none;
+}
+#top-stories .views-field-title a {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+/*views row by Joel */
+.views-row {
+  padding-bottom: 0px;
+}
+
+/*
+Blue News
+*/
+#blue { /* changed by Joel
+  background: #dce3e4 url(images/blue.jpg) repeat-x;
+  clear: both; */
+  background: transparent none repeat scroll 0% 0%;
+  clear: both;
+  border: 3px solid rgb(153, 153, 153);
+}
+
+#blue-header { /*changed by Joel
+  padding: 10px 15px;
+  height: 20px; */
+  padding: 10px 15px;
+  height: 20px;
+  background: #9c2d27;
+  margin: 10px;
+}
+#blue-header h3 {
+  /* changed by Joel
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #666;
+  font-family: 'Lato', Verdana, Arial, sans-serif;
+  float: left;
+  width: 66%; */
+  margin: -3px;
+  text-transform: uppercase;
+  font-family: "Cardo", Georgia, serif;
+  float: left;
+  width: 66%;
+  color: white;
+}
+#blue-header p {
+  margin: 0;
+}
+#blue-header a {
+  display: block;
+  float: right;
+  width: 33%;
+  text-align: right;
+  font-family: 'Cardo', Georgia, serif;
+  text-transform: small-caps;
+  /*added by Joel */
+  color:white;
+  text-decoration: underline;
+}
+/*added by Joel */
+#blue-header a:hover {
+  text-decoration: none;
+}
+
+#blue-header
+#blue .view-content {
+  clear: both;
+}
+#blue .views-row {
+  float: left;
+  width: 30%;
+  padding: 15px;
+}
+#blue .views-field-field-image {
+  float: left;
+  width: 33%;
+}
+#blue .views-field-field-image img {
+  padding-right: 10px;
+  width: 100%;
+  height: 100%;
+}
+#blue .views-field-field-category, #blue .views-field-title {
+  width: 60%;
+  float: right;
+}
+#blue .views-field-field-category a {
+  font-family: 'Cardo', Georgia, serif;
+  text-transform: uppercase;
+  color: #666;
+}
+#blue .views-field-field-category a:hover, #blue .views-field-field-category a:active {
+  color: black;
+  text-decoration: none;
+}
+#blue .views-field-title {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 1.3em;
+  line-height: 1.2em;
+}
+
+/*
+Sections (front)
+*/
+
+#content-front-lower .region.region-contentfront {
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-gap: 12px;
+  padding: 4px 4px;
+  border-top: 1px solid #ccc;
+}
+
+#content-front-lower .block {
+  width: 100%;
+}
+#content-front-lower h2 { /*changed by Joel
+  color: #5396a0;
+  text-transform: small-caps; */
+  color: #000; /*changed by JK rgb(255, 255, 255); */
+  font-family: 'Cardo', Georgia, serif;
+  /* changed by JK ackground: rgb(156, 45, 39) none repeat scroll 0% 0%; */
+  padding: 2px 0px 2px 10px;
+  text-align:center;
+
+}
+#content-front-lower .views-field-field-image {
+  width: 100%;
+}
+#content-front-lower .views-field-field-image img {
+  /*margin-right: 10px;*/
+  width: 100%;
+  height: auto;
+}
+#content-front-lower .views-field-title {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 1.2em;
+  line-height: 1.1em;
+  float:left;
+  padding: 5px;
+}
+#content-front-lower .views-field-field-teaser {
+  /*float: right;
+  width: 55%;*/
+  padding-top: 10px;
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+#content-front-lower ul.story-list {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+#content-front-lower ul.story-list li {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 1em;
+  line-height: 1.3em;
+  list-style: none;
+  margin-top: 10px;
+}
+
+/*
+Article content
+*/
+#article-picture {
+  float: right;
+  display: inline;
+}
+#article-caption {
+  float: right;
+  display: block;
+  background-color: #eee;
+  padding: 10px;
+  font-size: 0.9em;
+  max-width: 300px;
+  min-width: 300px;
+}
+#article-content {
+  background-color: white;
+}
+#article-teaser {
+  font-size: 1.5em;
+  line-height: 150%;
+  color: #666;
+}
+
+/*
+Content (inner)
+*/
+#content-inner {
+  float: left;
+  width: 66%;
+  padding-bottom: 25px;
+}
+#content-inner h1 {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 2.5em;
+  line-height: 1.2em;
+}
+#content-inner img {
+  /*float: right;*/
+  max-width: 320px;
+}
+#content-inner #article-picture {
+  margin-left: 10px;
+}
+
+/*
+Footer
+*/
+footer {
+  background: #75201c url(images/footer.png) repeat-x;
+  clear: both;
+  padding: 45px 0;
+  font-family: 'Lato', Verdana, Arial, sans-serif;
+  color: white;
+}
+#footer-inner {
+  width: 100%;
+    min-width: 960px;
+  margin: 0 80px;
+}
+footer p {
+  margin: 0;
+}
+footer a {
+  color: #eff0af;
+}
+footer a:hover {
+  color: #feffce;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  display: inline;
+  list-style: none;
+}
+footer ul li a {
+  font-family: 'Lato', Verdana, Arial, sans-serif;
+  padding-right: 25px;
+}
+
+
+/*
+Twitter widget
+*/
+
+#twitter-widget-0 {
+  height: 500px;
+}
+/*
+Global classes
+*/
+.claritin {
+  clear: both;
+}
